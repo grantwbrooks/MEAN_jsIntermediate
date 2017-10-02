@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    // Part I
+        function starString(num){
+            return Array(num+1).join("*");
+        }
+        let stars = starString(8)
+        console.log(stars);
+
+    // Part II
+        function drawStars(arr){
+            for(var i = 0; i<arr.length; i++){
+                console.log(starString(arr[i]));
+            }
+        }
+        let x = [4, 6, 1, 3, 5, 7, 25];
+        drawStars(x);
+
+    // Part III
+    // Really liking the Array and join stuff below
+        function drawStars2(arr){
+                for(var i = 0; i<arr.length; i++){
+                    if(arr[i].constructor === String){
+                        let first = arr[i][0].toLowerCase();
+                        console.log(Array(arr[i].length+1).join(first));
+                    }
+                    else{
+                        console.log(starString(arr[i]));
+                    }
+                    
+                }
+            }
+            let d = [4, "Tom", 1, "Michael", 5, 7, "Jimmy Smith"];
+            drawStars2(d);
+        
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
